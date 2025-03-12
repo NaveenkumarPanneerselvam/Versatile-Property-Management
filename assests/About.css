@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+}
+
+/* Navbar */
+.navbar-logo {
+    max-height: 50px;
+    width: auto; 
+}
+
+.navbar-nav .nav-link {
+    font-weight: bolder;
+    color: #212529;
+    font-size: 25px;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.navbar-nav .nav-link.active {
+    background: linear-gradient(90deg, red, blue, yellow);
+    background-size: 300% 300%;
+    animation: gradientShift 4s linear infinite;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* About Section */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+}
+
+
+/* Testimonial Section */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.stars {
+    font-size: 1.2rem;
+    color: gold;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        min-width: 100%;
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .stars {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial {
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        padding: 5px;
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+
+@media (max-width: 768px) {
+    footer div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer button {
+        width: 100%;
+    }
+}
+
+
